@@ -26,6 +26,13 @@
 - [ ] 2–3 true sentences for "About me" (years in toy/hobby, what you founded, any deal-like work).
 - [ ] Optional: install gitleaks for a stronger secrets scan (needs your permission to download it).
 
+## Live demo
+https://asher40121.github.io/long-game/ (deployed 2026-11-24 from the gh-pages branch)
+
+## Built so far (Phase 3)
+- Landing page, Relationship map, pipeline board/table with Needs attention, target pages (founder, timeline, log a touchpoint), fit scorecard with adjustable weights, portfolio gaps, 12 sample decision briefs plus assembled briefs, six-step guided tour, light/dark, reset, storage note.
+- 104 tests passing (fit, health, briefs truthfulness, seed integrity, storage).
+
 ## Phase 2 deliverables
 - docs/WIREFRAMES.md, docs/ARCHITECTURE.md, docs/ROADMAP.md
 - src/data/seed.ts (12 targets), src/data/portfolio.ts
@@ -34,4 +41,4 @@
 - GitHub: 3 milestones, 17 issues with acceptance criteria
 
 ## Next actions
-- Phase 3: v0.1 issues #1–#7, then v0.2 #8–#14 and #18–#20.
+- Remaining: #12 add/edit target, #13 README + screenshots, #14 quality pass, #20 video script and GIF; then Phase 5 (LinkedIn post, application blurb).
