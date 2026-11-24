@@ -1,11 +1,10 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col justify-center gap-4 px-6">
-      <p className="text-sm font-semibold uppercase tracking-widest text-zinc-500">Long Game</p>
-      <h1 className="text-4xl font-semibold tracking-tight">
-        A relationship-first deal pipeline for corporate development teams.
-      </h1>
-      <p className="text-zinc-600 dark:text-zinc-400">In development. Demo with fictional data.</p>
-    </main>
+    <div className="py-16">
+      <h1 className="max-w-3xl text-4xl font-semibold tracking-tight">The deal pipeline that treats the founder relationship as the asset.</h1>
+      <Link href="/pipeline" className="mt-6 inline-block text-accent hover:underline">Open the pipeline →</Link>
+    </div>
   );
 }

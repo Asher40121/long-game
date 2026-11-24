@@ -133,6 +133,10 @@ export type Target = {
   risks: RiskFlag[];
   /** Hand-written low-pressure reasons to reach out. */
   reachOutIdeas: string[];
+  /** Set when the visitor changes a seeded target (sample outputs may no longer match). */
+  edited?: boolean;
+  /** Set for targets the visitor created. */
+  custom?: boolean;
 };
 
 /** The (fictional) acquirer's current portfolio, used to measure fit against gaps. */

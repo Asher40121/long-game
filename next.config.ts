@@ -4,6 +4,7 @@ import type { NextConfig } from "next";
 const isStaticExport = process.env.STATIC_EXPORT === "1";
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
