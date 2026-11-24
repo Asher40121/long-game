@@ -22,8 +22,9 @@
 - 2026-11-24: Public contact: name, GitHub profile, LinkedIn profile (no email).
 
 ## Open questions
-- [ ] LinkedIn profile URL.
-- [ ] 2–3 true sentences for "About me" (years in toy/hobby, what you founded, any deal-like work).
+- [x] LinkedIn profile URL (added 2026-11-24).
+- [x] "About me" wording approved 2026-11-24.
+- [ ] Video: Phil records from docs/VIDEO_SCRIPT.md and sends the unlisted YouTube link.
 - [ ] Optional: install gitleaks for a stronger secrets scan (needs your permission to download it).
 
 ## Live demo
@@ -41,4 +42,5 @@ https://asher40121.github.io/long-game/ (deployed 2026-11-24 from the gh-pages b
 - GitHub: 3 milestones, 17 issues with acceptance criteria
 
 ## Next actions
-- Remaining: #12 add/edit target, #13 README + screenshots, #14 quality pass, #20 video script and GIF; then Phase 5 (LinkedIn post, application blurb).
+- Done: #13 README + screenshots; #20 video script, shot list and recording checklist (docs/VIDEO_SCRIPT.md). README GIF replaced by a video still + link (no converter on this Mac).
+- Remaining: Phil records the video; add the link to README and landing (plain link, no embed); #14 quality pass; #12 add/edit target (optional); then Phase 5 (LinkedIn post, application blurb).
