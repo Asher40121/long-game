@@ -191,8 +191,12 @@ function StoryOverlay({ step, setStep, stop }: { step: number; setStep: (n: numb
         aria-modal="false"
         aria-labelledby="story-title"
         aria-live="polite"
-        className={`pointer-events-auto absolute inset-x-3 bottom-3 rounded-2xl border border-line bg-surface p-5 text-ink shadow-2xl outline-none sm:inset-x-auto sm:right-6 sm:bottom-6 sm:w-[420px] ${
-          !s.target ? "sm:right-1/2 sm:bottom-1/2 sm:translate-x-1/2 sm:translate-y-1/2" : ""
+        className={`pointer-events-auto absolute max-h-[calc(100vh-24px)] overflow-y-auto rounded-2xl border border-line bg-surface p-5 text-ink shadow-2xl outline-none ${
+          s.target
+            ? // Anchored: a bottom sheet on phones, the bottom-right corner on larger screens.
+              "inset-x-3 bottom-3 sm:inset-x-auto sm:right-6 sm:bottom-6 sm:w-[420px]"
+            : // No element to point at: centered on every screen size.
+              "left-1/2 top-1/2 w-[min(460px,calc(100vw-24px))] -translate-x-1/2 -translate-y-1/2"
         }`}
       >
         <div className="flex items-center gap-2">
