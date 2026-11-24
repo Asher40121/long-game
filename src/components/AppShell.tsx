@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import { useStore } from "@/components/store";
+import { useStory } from "@/components/story/Story";
 import { THEME_KEY } from "@/lib/storage/state";
 import { buttonPrimary, buttonSecondary } from "@/components/ui";
 
-export const GITHUB_URL = "https://github.com/Asher40121/long-game";
-export const AUTHOR_GITHUB = "https://github.com/Asher40121";
+import { AUTHOR_GITHUB, GITHUB_URL } from "@/lib/links";
 
 const NAV = [
   { href: "/relationships", label: "Relationships" },
@@ -52,6 +52,7 @@ function ThemeToggle() {
 
 export function Header() {
   const pathname = usePathname();
+  const { start } = useStory();
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:rounded focus:bg-surface focus:px-3 focus:py-1.5">
@@ -81,6 +82,9 @@ export function Header() {
           <span className="hidden md:inline-flex">
             <DemoBadge />
           </span>
+          <button type="button" onClick={start} className="rounded-lg px-2 py-1.5 text-sm font-medium text-accent hover:bg-surface-2">
+            Tour
+          </button>
           <ThemeToggle />
         </div>
       </div>

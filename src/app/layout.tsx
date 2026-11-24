@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer, Header } from "@/components/AppShell";
 import { StoreProvider } from "@/components/store";
+import { StoryProvider } from "@/components/story/Story";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -24,11 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="flex min-h-full flex-col">
         <StoreProvider>
+          <StoryProvider>
           <Header />
           <main id="main" className="mx-auto w-full max-w-7xl flex-1 px-4 pt-6 sm:px-6">
             {children}
           </main>
           <Footer />
+          </StoryProvider>
         </StoreProvider>
       </body>
     </html>
