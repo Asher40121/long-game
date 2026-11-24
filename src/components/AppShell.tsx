@@ -8,7 +8,7 @@ import { useStory } from "@/components/story/Story";
 import { THEME_KEY } from "@/lib/storage/state";
 import { buttonPrimary, buttonSecondary } from "@/components/ui";
 
-import { AUTHOR_GITHUB, GITHUB_URL } from "@/lib/links";
+import { AUTHOR_GITHUB, AUTHOR_LINKEDIN, GITHUB_URL } from "@/lib/links";
 
 const NAV = [
   { href: "/relationships", label: "Relationships" },
@@ -143,7 +143,9 @@ export function Footer() {
         </button>
         <a className="hover:text-ink" href={GITHUB_URL}>Source on GitHub</a>
         <span className="sm:ml-auto">
-          Built by <a className="underline-offset-2 hover:text-ink hover:underline" href={AUTHOR_GITHUB}>Phil Albritton</a>
+          Built by Phil Albritton ·{" "}
+          <a className="underline-offset-2 hover:text-ink hover:underline" href={AUTHOR_LINKEDIN}>LinkedIn</a> ·{" "}
+          <a className="underline-offset-2 hover:text-ink hover:underline" href={AUTHOR_GITHUB}>GitHub</a>
         </span>
         {!persisted && <span className="w-full text-xs text-warn">Your browser is blocking storage, so changes last only for this visit.</span>}
       </div>

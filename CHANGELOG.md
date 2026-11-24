@@ -4,6 +4,7 @@ All notable changes to this project are documented here. Format based on [Keep a
 
 ## [Unreleased]
 ### Added
+- README with screenshots, AI guardrails and About me; LinkedIn link in the footer and tour.
 - Live demo on GitHub Pages: landing page, Relationship map, pipeline, target pages, fit scorecard, portfolio gaps, decision briefs, guided tour.
 - Project scaffold: Next.js, TypeScript, Tailwind CSS, Vitest; static export for GitHub Pages.
 - Fictional seed data: an acquirer with 5 brands and 12 targets with founders and touchpoint histories.

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { AUTHOR_GITHUB, GITHUB_URL } from "@/lib/links";
+import { AUTHOR_GITHUB, AUTHOR_LINKEDIN, GITHUB_URL } from "@/lib/links";
 import { useStore } from "@/components/store";
 import { buttonPrimary, buttonSecondary } from "@/components/ui";
 
@@ -81,6 +81,7 @@ export const STEPS: StoryStep[] = [
         so I know the founder&apos;s side of the table. Long Game is how I&apos;d organize long-term acquisition relationships:
         relationship first, fit against real gaps, and clear briefs for leadership.
         <span className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          <a className="text-accent hover:underline" href={AUTHOR_LINKEDIN}>LinkedIn</a>
           <a className="text-accent hover:underline" href={AUTHOR_GITHUB}>GitHub</a>
           <a className="text-accent hover:underline" href={GITHUB_URL}>Source code</a>
         </span>

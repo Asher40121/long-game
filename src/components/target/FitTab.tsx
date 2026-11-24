@@ -150,7 +150,7 @@ function RatingInput({ label, value, onChange }: { label: string; value: number 
         role="radio"
         aria-checked={value == null}
         onClick={() => onChange(null)}
-        className={`ml-1 rounded-md px-1.5 text-xs ${value == null ? "font-medium text-ink" : "text-faint hover:text-muted"}`}
+        className={`ml-1 whitespace-nowrap rounded-md px-1.5 text-xs ${value == null ? "font-medium text-ink" : "text-faint hover:text-muted"}`}
       >
         Not assessed
       </button>
