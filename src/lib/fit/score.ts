@@ -129,6 +129,9 @@ const PHRASES: Record<Criterion, [string, string]> = {
 
 const list = (xs: string[]) => (xs.length <= 1 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
 
+export const MIN_RATED_FOR_BAND = 3;
+export const PRELIMINARY = "Preliminary";
+
 export function scoreFit(
   target: Target,
   portfolio: PortfolioBrand[],
@@ -159,7 +162,10 @@ export function scoreFit(
   );
   const base = assessedWeight > 0 ? (earned / assessedWeight) * 100 : 0;
   const score = Math.round(Math.max(0, Math.min(100, base - riskPenalty)));
-  const band = BANDS.find((b) => score >= b.min)!.label;
+  // With fewer than three criteria rated by hand, the score leans on the calculated expansion rating alone,
+  // so it's labeled preliminary instead of given a band.
+  const rated = CRITERIA.filter((c) => !c.computed && target.fit[c.id as keyof FitRatings] != null).length;
+  const band = rated < MIN_RATED_FOR_BAND ? PRELIMINARY : BANDS.find((b) => score >= b.min)!.label;
 
   const fills = [
     ...expansion.newCategories.map((c) => CATEGORIES[c]),

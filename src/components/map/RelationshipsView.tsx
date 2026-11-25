@@ -4,7 +4,8 @@ import { RelationshipMap, buildRows } from "@/components/map/RelationshipMap";
 import { NeedsAttention } from "@/components/pipeline/PipelineView";
 import { useStore } from "@/components/store";
 import { useInsights } from "@/components/useInsights";
-import { Card, Skeleton, relative } from "@/components/ui";
+import Link from "next/link";
+import { Card, Skeleton, buttonSecondary, relative } from "@/components/ui";
 
 export function RelationshipsView() {
   const { ready, today } = useStore();
@@ -25,7 +26,10 @@ export function RelationshipsView() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold tracking-tight">Relationships</h1>
+      <div className="flex flex-wrap items-center gap-3">
+        <h1 className="text-2xl font-semibold tracking-tight">Relationships</h1>
+        <Link href="/edit" className={`${buttonSecondary} ml-auto`}>+ Add a company</Link>
+      </div>
       <p className="mt-1 max-w-3xl text-sm text-muted">
         Every founder relationship across the years. Each dot is a call, meeting, intro or note. Good deals in founder-led
         businesses come from relationships kept warm for years, so the gaps matter as much as the dots.

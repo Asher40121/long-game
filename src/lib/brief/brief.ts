@@ -62,7 +62,7 @@ export function assembleBrief(t: Target, fit: FitResult, health: Health, reach: 
   L.push("");
 
   L.push("### What the founder cares about");
-  if (f.priorities.length) L.push(`In order: ${f.priorities.map((p) => `${PRIORITY_LABELS[p.priority].toLowerCase()} (${p.note.replace(/\.$/, "")})`).join("; ")}.`);
+  if (f.priorities.length) L.push(`In order: ${f.priorities.map((p) => `${PRIORITY_LABELS[p.priority].toLowerCase()}${p.note ? ` (${p.note.replace(/\.$/, "")})` : ""}`).join("; ")}.`);
   else L.push(`Not yet known. Learning what matters to ${f.name || "the founder"} is the first job.`);
   const concerns = f.concerns.filter((c) => !/^unknown/i.test(c));
   if (concerns.length) L.push(`Concerns: ${concerns.join(" ")}`);

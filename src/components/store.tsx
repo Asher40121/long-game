@@ -20,6 +20,8 @@ type Store = {
   resetWeights(): void;
   updateTarget(id: string, patch: Partial<Target>): void;
   addTarget(t: Target): void;
+  /** Removes a visitor-created target. Seeded targets can't be removed (reset restores them anyway). */
+  removeTarget(id: string): void;
   setStorySeen(seen: boolean): void;
   resetDemo(): void;
 };
@@ -77,6 +79,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       resetWeights: () => setState((s) => ({ ...s, weights: { ...DEFAULT_WEIGHTS } })),
       updateTarget: (id, patch) => mapTarget(id, (t) => ({ ...t, ...patch, edited: true })),
       addTarget: (t) => setState((s) => ({ ...s, targets: [...s.targets, t] })),
+      removeTarget: (id) => setState((s) => ({ ...s, targets: s.targets.filter((t) => t.id !== id || !t.custom) })),
       setStorySeen: (seen) => setState((s) => ({ ...s, storySeen: seen })),
       resetDemo: () => setState((s) => freshState(today, s.storySeen)),
     }),

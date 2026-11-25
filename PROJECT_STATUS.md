@@ -21,6 +21,9 @@
 - 2026-11-24: Experience = in-app guided story (#19) + a 90-second video in Phil's voice, scripted by Claude, recorded by Phil with macOS screen recording (#20). Story replaces the 3-step tour.
 - 2026-11-24: Public contact: name, GitHub profile, LinkedIn profile (no email).
 
+- 2026-11-24: Always open in dark mode (theme choice no longer saved).
+- 2026-11-24: Fit with fewer than 3 hand-rated criteria is labeled "Preliminary".
+
 ## Open questions
 - [x] LinkedIn profile URL (added 2026-11-24).
 - [x] "About me" wording approved 2026-11-24.
@@ -32,7 +35,7 @@ https://asher40121.github.io/long-game/ (deployed 2026-11-24 from the gh-pages b
 
 ## Built so far (Phase 3)
 - Landing page, Relationship map, pipeline board/table with Needs attention, target pages (founder, timeline, log a touchpoint), fit scorecard with adjustable weights, portfolio gaps, 12 sample decision briefs plus assembled briefs, six-step guided tour, light/dark, reset, storage note.
-- 104 tests passing (fit, health, briefs truthfulness, seed integrity, storage).
+- 118 tests passing (fit, health, briefs truthfulness, seed integrity, storage).
 
 ## Phase 2 deliverables
 - docs/WIREFRAMES.md, docs/ARCHITECTURE.md, docs/ROADMAP.md
@@ -43,4 +46,5 @@ https://asher40121.github.io/long-game/ (deployed 2026-11-24 from the gh-pages b
 
 ## Next actions
 - Done: #13 README + screenshots; #20 video script, shot list and recording checklist (docs/VIDEO_SCRIPT.md). README GIF replaced by a video still + link (no converter on this Mac).
-- Remaining: Phil records the video; add the link to README and landing (plain link, no embed); #14 quality pass; #12 add/edit target (optional); then Phase 5 (LinkedIn post, application blurb).
+- Done: #12 add/edit companies (/edit). Dark mode is the default on every visit (2026-11-24, Phil's request).
+- Remaining: Phil records the video; add the link to README and landing (plain link, no embed); #14 quality pass; then Phase 5 (LinkedIn post, application blurb).

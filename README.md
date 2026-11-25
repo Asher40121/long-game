@@ -27,14 +27,14 @@ Most deal trackers are built around stages and numbers. The thing that actually 
 | ![Fit scorecard](docs/screenshots/fit.png) | **Fit scorecard, measured against gaps.** Seven weighted criteria with a one-line "why". Channel and geographic expansion is calculated from the categories, regions and channels the portfolio lacks. Drag the weights and every score updates. Risk flags subtract a capped penalty. |
 | ![Decision brief](docs/screenshots/brief.png) | **One-page decision brief.** Recommendation, the business, why it fits, what the founder cares about, key risks, what we don't know yet, and a next step with an owner. |
 
-Also: a pipeline board and sortable table across 10 relationship stages (including Nurture and Passed), a **Needs attention** list, a portfolio page showing which targets fill which gaps, a 60-second guided tour, light and dark mode, and phone layouts.
+Also: **add your own companies and founders** (with upcoming key dates that appear on the map) and edit any company, a pipeline board and sortable table across 10 relationship stages (including Nurture and Passed), a **Needs attention** list, a portfolio page showing which targets fill which gaps, a 60-second guided tour, dark mode by default with a light toggle, and phone layouts.
 
 <p align="center"><img src="docs/screenshots/tour-phone.png" alt="The guided tour on a phone" width="300"></p>
 
 ## How it works
 
 - **Relationship health** compares days since the last touch with the rhythm each stage calls for (First Conversation every 30 days, Evaluating 21, Diligence 7, Nurture 90). A relationship has **gone quiet** at 60+ days and past its rhythm. Suggestions put upcoming founder key dates first, then low-pressure reasons to reach out.
-- **Fit** is a transparent weighted tally: each criterion earns *weight × (rating − 1) ÷ 4*, scaled to 100 over the criteria assessed, minus risk penalties (high 5, medium 2, low 1; at most 15). Unassessed criteria are excluded and called out, never guessed.
+- **Fit** is a transparent weighted tally: each criterion earns *weight × (rating − 1) ÷ 4*, scaled to 100 over the criteria assessed, minus risk penalties (high 5, medium 2, low 1; at most 15). Unassessed criteria are excluded and called out, never guessed; with fewer than three criteria rated, the score is labeled **Preliminary**.
 - **The demo never goes stale.** Seed dates are stored relative to "today", so whoever visits sees the same story: two founders gone quiet, a deal closing in two weeks, a launch next month.
 
 ## How AI is used, and its guardrails
@@ -67,8 +67,7 @@ npm run scan         # secrets scan before pushing
 
 ## Roadmap
 
-- ✅ Relationship map, pipeline, founder profiles, relationship health, fit scorecard, portfolio gaps, decision briefs, guided tour
-- ⏳ Add and edit targets
+- ✅ Relationship map, pipeline, founder profiles, relationship health, fit scorecard, portfolio gaps, decision briefs, guided tour, add and edit companies
 - ⏳ Founder conversation prep: a 5-minute briefing, open questions, topics to avoid ([prompt draft](docs/prompts/conversation-prep.md))
 - ⏳ Diligence and integration checklist that carries forward what the founder wants to preserve
 - ⏳ Optional live AI with rate limiting and a daily spend cap

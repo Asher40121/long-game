@@ -13,7 +13,6 @@ export type State = {
 };
 
 export const STORAGE_KEY = "longgame:v1:state";
-export const THEME_KEY = "longgame:theme";
 
 /** Minimal storage interface so the logic can be tested without a browser. */
 export type KV = { getItem(k: string): string | null; setItem(k: string, v: string): void; removeItem(k: string): void };

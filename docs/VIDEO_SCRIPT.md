@@ -21,7 +21,7 @@ About 215 spoken words, which comes to roughly 90 seconds at a relaxed pace.
 
 - [ ] Open the **live demo** in Chrome: https://asher40121.github.io/long-game/
 - [ ] Footer → **Reset demo data** → confirm, so dates are fresh and nothing is edited.
-- [ ] Light mode (the half-circle button in the header).
+- [ ] Dark mode (the default; leave it as is).
 - [ ] Use a clean Chrome window: **File → New Window**, hide the bookmarks bar (⌘ Shift B), no extra tabs.
 - [ ] Browser zoom 110% (⌘ +) so text reads well on a phone.
 - [ ] Turn on **Do Not Disturb** (Control Center → Focus) and quit Slack, Mail and Messages.

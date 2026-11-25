@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import { useStore } from "@/components/store";
 import { useStory } from "@/components/story/Story";
-import { THEME_KEY } from "@/lib/storage/state";
 import { buttonPrimary, buttonSecondary } from "@/components/ui";
 
 import { AUTHOR_GITHUB, AUTHOR_LINKEDIN, GITHUB_URL } from "@/lib/links";
@@ -26,13 +25,8 @@ export function DemoBadge() {
 
 function ThemeToggle() {
   const toggle = () => {
-    const dark = !document.documentElement.classList.contains("dark");
-    document.documentElement.classList.toggle("dark", dark);
-    try {
-      localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
-    } catch {
-      /* storage blocked: the choice lasts for this visit */
-    }
+    // Not saved: every visit starts in dark mode.
+    document.documentElement.classList.toggle("dark");
   };
   return (
     <button

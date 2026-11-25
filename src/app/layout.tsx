@@ -14,15 +14,10 @@ export const metadata: Metadata = {
     "A relationship-first deal pipeline for corporate development teams: track founders over years, score fit against portfolio gaps, and brief leadership in one page. Demo with fictional data.",
 };
 
-// Applies the saved theme (or the system setting) before first paint, to avoid a flash.
-const themeScript = `try{var t=localStorage.getItem("longgame:theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // The demo always opens in dark mode; the header toggle switches to light for the rest of the visit.
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
+    <html lang="en" suppressHydrationWarning className={`dark ${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <StoreProvider>
           <StoryProvider>

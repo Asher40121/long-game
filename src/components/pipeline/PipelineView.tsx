@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useStore } from "@/components/store";
 import { targetHref, useInsights, type Insight } from "@/components/useInsights";
-import { Card, FitScore, HealthChip, HealthDot, SectionTitle, Skeleton, relative, stageLabel } from "@/components/ui";
+import { Card, FitScore, HealthChip, HealthDot, SectionTitle, Skeleton, buttonPrimary, relative, stageLabel } from "@/components/ui";
 import { HEALTH_LABELS, type HealthStatus } from "@/lib/health/health";
 import { CATEGORIES, SIZE_BANDS, STAGES, type Stage } from "@/lib/model";
 
@@ -52,6 +52,7 @@ export function PipelineView() {
             </button>
           ))}
         </div>
+        <Link href="/edit" className={buttonPrimary}>+ Add a company</Link>
       </div>
 
       {!ready ? (

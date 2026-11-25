@@ -38,11 +38,13 @@ function FounderCard({ insight }: { insight: Insight }) {
       <SectionTitle>Founder</SectionTitle>
       <h3 className="mt-2 text-lg font-semibold">{f.name}</h3>
       <p className="text-sm text-muted">{f.role}</p>
-      <p className="mt-3 text-sm leading-relaxed">{f.background}</p>
-      <p className="mt-2 text-sm leading-relaxed">
-        <span className="font-medium">What they built: </span>
-        {f.built}
-      </p>
+      {f.background && <p className="mt-3 text-sm leading-relaxed">{f.background}</p>}
+      {f.built && (
+        <p className="mt-2 text-sm leading-relaxed">
+          <span className="font-medium">What they built: </span>
+          {f.built}
+        </p>
+      )}
 
       {f.priorities.length > 0 && (
         <div className="mt-4">
@@ -62,26 +64,34 @@ function FounderCard({ insight }: { insight: Insight }) {
         </div>
       )}
 
-      <div className="mt-4">
-        <h4 className="text-sm font-semibold">Concerns</h4>
-        <ul className="mt-1.5 list-disc space-y-1 pl-5 text-sm text-muted">
-          {f.concerns.map((c) => <li key={c}>{c}</li>)}
-        </ul>
-      </div>
+      {f.concerns.length > 0 && (
+        <div className="mt-4">
+          <h4 className="text-sm font-semibold">Concerns</h4>
+          <ul className="mt-1.5 list-disc space-y-1 pl-5 text-sm text-muted">
+            {f.concerns.map((c, i) => <li key={i}>{c}</li>)}
+          </ul>
+        </div>
+      )}
 
-      <div className="mt-4">
-        <h4 className="text-sm font-semibold">Communication style</h4>
-        <p className="mt-1 text-sm text-muted">{f.communication}</p>
-      </div>
+      {f.communication && (
+        <div className="mt-4">
+          <h4 className="text-sm font-semibold">Communication style</h4>
+          <p className="mt-1 text-sm text-muted">{f.communication}</p>
+        </div>
+      )}
+
+      {!f.priorities.length && !f.concerns.length && !f.communication && (
+        <p className="mt-3 text-sm text-muted">Not much known yet. Use Edit to add what you learn about {f.name.split(" ")[0]}.</p>
+      )}
 
       {f.keyDates.length > 0 && (
         <div className="mt-4">
           <h4 className="text-sm font-semibold">Key dates</h4>
           <ul className="mt-1.5 space-y-1 text-sm">
-            {f.keyDates.map((k) => {
+            {f.keyDates.map((k, i) => {
               const d = daysBetween(today, k.date);
               return (
-                <li key={k.label} className="flex justify-between gap-3">
+                <li key={`${k.date}-${i}`} className="flex justify-between gap-3">
                   <span className={d < 0 ? "text-muted" : ""}>{k.label}</span>
                   <span className="shrink-0 tabular-nums text-muted" title={formatDate(k.date)}>{relative(-d)}</span>
                 </li>
@@ -122,7 +132,7 @@ function BusinessCard({ insight }: { insight: Insight }) {
           </div>
         ))}
       </dl>
-      <div className="mt-4">
+      {t.channels.length > 0 && <div className="mt-4">
         <h4 className="text-sm font-semibold">Channel mix</h4>
         <div className="mt-2 flex h-2.5 overflow-hidden rounded-full bg-surface-2" role="img" aria-label={t.channels.map((c) => `${CHANNELS[c.channel]} ${c.share}%`).join(", ")}>
           {t.channels.map((c, i) => (
@@ -132,11 +142,13 @@ function BusinessCard({ insight }: { insight: Insight }) {
         <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
           {t.channels.map((c) => <li key={c.channel}>{CHANNELS[c.channel]} {c.share}%</li>)}
         </ul>
-      </div>
-      <div className="mt-4">
-        <h4 className="text-sm font-semibold">Strategic rationale</h4>
-        <p className="mt-1 text-sm leading-relaxed text-muted">{t.rationale}</p>
-      </div>
+      </div>}
+      {t.rationale && (
+        <div className="mt-4">
+          <h4 className="text-sm font-semibold">Strategic rationale</h4>
+          <p className="mt-1 text-sm leading-relaxed text-muted">{t.rationale}</p>
+        </div>
+      )}
     </Card>
   );
 }

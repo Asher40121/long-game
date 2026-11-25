@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useStore } from "@/components/store";
 import { useInsights, type Insight } from "@/components/useInsights";
-import { Card, FitScore, HealthChip, SectionTitle, Skeleton, formatDate } from "@/components/ui";
+import { Card, FitScore, HealthChip, SectionTitle, Skeleton, buttonSecondary, formatDate } from "@/components/ui";
 import { FitTab } from "@/components/target/FitTab";
 import { RelationshipTab } from "@/components/target/RelationshipTab";
 import { BriefTab } from "@/components/target/BriefTab";
@@ -53,12 +53,16 @@ export function TargetView() {
       <Link href="/pipeline" className="text-sm text-muted hover:text-ink">← Pipeline</Link>
       <div className="mt-3 flex flex-wrap items-start gap-4">
         <div className="min-w-0 flex-1">
-          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{t.name}</h1>
+          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+            {t.name}
+            {t.custom && <span className="ml-2 align-middle rounded-full bg-surface-2 px-2 py-0.5 text-xs font-medium text-muted">Added by you</span>}
+          </h1>
           <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted">{t.oneLiner}</p>
           <p className="mt-1 text-xs text-faint">
-            {t.hq} · founded {t.founded}
+            {[t.hq, t.founded ? `founded ${t.founded}` : ""].filter(Boolean).join(" · ")}
           </p>
         </div>
+        <Link href={`/edit?id=${encodeURIComponent(t.id)}`} className={`${buttonSecondary} self-end`}>Edit</Link>
         <label className="text-sm">
           <span className="mb-1 block text-xs font-medium text-muted">Stage</span>
           <select
