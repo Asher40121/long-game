@@ -1,0 +1,34 @@
+1:"$Sreact.fragment"
+2:"/long-game/_next/static/chunks/41o3__umsmzvn.js"
+3:"/long-game/_next/static/chunks/2og41i-jy5h1c.js"
+4:I[24831,["$2","$3"],"StoreProvider"]
+5:I[22770,["$2","$3"],"StoryProvider"]
+6:I[49830,["$2","$3"],"Header"]
+7:I[39756,["$2","$3"],"default"]
+8:I[37457,["$2","$3"],"default"]
+9:I[49830,["$2","$3"],"Footer"]
+10:"$Sreact.suspense"
+11:"/long-game/_next/static/chunks/14-9_jsk9nnus.js"
+12:I[43859,["$2","$3","$11"],"TargetEditor"]
+13:I[97367,["$2","$3"],"OutletBoundary"]
+16:"ViewportBoundary"
+17:I[97367,["$2","$3"],"$16"]
+18:"MetadataBoundary"
+19:I[97367,["$2","$3"],"$18"]
+1a:I[27201,["$2","$3"],"IconMark"]
+:HL["/long-game/_next/static/chunks/3pt5fn6krp4vc.css","style"]
+b:X
+e:X
+e:C
+f:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$10",null,{"fallback":["$","div",null,{"aria-hidden":true,"className":"animate-pulse rounded-lg bg-surface-2 h-96"}],"children":["$","$L12",null,{}]}],[["$","script","script-0",{"src":"/long-game/_next/static/chunks/14-9_jsk9nnus.js","async":true}]],["$","$L13",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}],"p":"$@15","v":null,"s":"$b"}}]]
+c:[["children",{"s":"edit","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}]}]]}],"p":"$@d","v":"$e","s":"$b"},"c":"$Qf"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/long-game/_next/static/chunks/3pt5fn6krp4vc.css","precedence":"next"}],["$","script","script-0",{"src":"/long-game/_next/static/chunks/41o3__umsmzvn.js","async":true}],["$","script","script-1",{"src":"/long-game/_next/static/chunks/2og41i-jy5h1c.js","async":true}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"className":"dark T19VSG_variable _8Li5zG_variable h-full antialiased","children":["$","body",null,{"className":"flex min-h-full flex-col","children":["$","$L4",null,{"children":["$","$L5",null,{"children":[["$","$L6",null,{}],["$","main",null,{"id":"main","className":"mx-auto w-full max-w-7xl flex-1 px-4 pt-6 sm:px-6","children":["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}],["$","$L9",null,{}]]}]}]}]}]]}],"p":"$@a","v":null,"s":"$b"},"c":"$Qc"},"h":{"r":["$","$1","h",{"children":[null,["$","$L17",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L19",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Add or edit a company · Long Game"}],["$","meta","1",{"name":"description","content":"A relationship-first deal pipeline for corporate development teams: track founders over years, score fit against portfolio gaps, and brief leadership in one page. Demo with fictional data."}],["$","link","2",{"rel":"icon","href":"/long-game/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L1a","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@1b","v":null,"s":"$b"}},"a":"$@1c","u":"$@1d","b":"eKnvesIFdAplu5X7tJasj"}
+14:null
+b:300
+1d:true
+b:C
+1c:0
+d:"$undefined"
+a:"$undefined"
+1b:"$undefined"
+15:"$undefined"

@@ -1,4 +1,4 @@
-:HL["/long-game/_next/static/chunks/1lasvkkh3zz-z.css","style"]
+:HL["/long-game/_next/static/chunks/3pt5fn6krp4vc.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"rOLK4WBT2EohcjGvqQwjJ","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"eKnvesIFdAplu5X7tJasj","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
