@@ -46,6 +46,16 @@ export function TargetView() {
   }
 
   const t = insight.target;
+  // Tabs follow the ARIA pattern: one tab stop, arrow keys (and Home/End) move between tabs.
+  const onTabKey = (e: React.KeyboardEvent) => {
+    const i = TABS.findIndex((x) => x.id === tab);
+    const n = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: TABS.length - 1 }[e.key];
+    if (n === undefined) return;
+    e.preventDefault();
+    const next = TABS[(n + TABS.length) % TABS.length].id;
+    go(next);
+    document.getElementById(`tab-${next}`)?.focus();
+  };
   const go = (next: Tab) => router.replace(`/target?id=${encodeURIComponent(id)}${next === "relationship" ? "" : `&tab=${next}`}`, { scroll: false });
 
   return (
@@ -78,7 +88,7 @@ export function TargetView() {
 
       <SummaryCards insight={insight} onOpenFit={() => go("fit")} />
 
-      <div role="tablist" aria-label="Target sections" className="mt-6 flex gap-1 overflow-x-auto border-b border-line">
+      <div role="tablist" aria-label="Target sections" onKeyDown={onTabKey} className="mt-6 flex gap-1 overflow-x-auto border-b border-line">
         {TABS.map((x) => (
           <button
             key={x.id}
@@ -86,6 +96,7 @@ export function TargetView() {
             type="button"
             id={`tab-${x.id}`}
             aria-selected={tab === x.id}
+            tabIndex={tab === x.id ? 0 : -1}
             aria-controls={`panel-${x.id}`}
             data-story={x.id === "brief" ? "brief-tab" : undefined}
             onClick={() => go(x.id)}

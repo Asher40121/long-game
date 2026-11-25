@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Dark mode follows a .dark class on <html>, set before paint from the saved choice or the system setting. */
+/* Dark mode follows a .dark class on <html>. The app always opens dark; the header toggle switches for the visit. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -11,18 +11,20 @@
   --line-strong: #c9c9c1;
   --ink: #1a1c1e;
   --muted: #5d6166;
-  --faint: #8a8e93;
+  --faint: #686c71;
   --accent: #0e5a61;
   --accent-ink: #ffffff;
   --accent-soft: #e2efef;
   --good: #2e7a47;
   --good-soft: #e3f1e7;
-  --warn: #9a6200;
+  --warn: #8a5800;
   --warn-soft: #f7ecd6;
   --bad: #b1261d;
   --bad-soft: #f8e1df;
   --idle: #8a8e93;
   --idle-soft: #ececea;
+  /* Dims the page behind the guided tour. */
+  --scrim: rgb(0 0 0 / 0.45);
   color-scheme: light;
 }
 
@@ -34,7 +36,7 @@
   --line-strong: #3b4146;
   --ink: #e9eaeb;
   --muted: #a3a8ad;
-  --faint: #7c8288;
+  --faint: #858b91;
   --accent: #5fb7bd;
   --accent-ink: #0b1a1b;
   --accent-soft: #17302f;
@@ -46,6 +48,7 @@
   --bad-soft: #351a18;
   --idle: #8b9196;
   --idle-soft: #24282b;
+  --scrim: rgb(0 0 0 / 0.68);
   color-scheme: dark;
 }
 

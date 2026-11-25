@@ -7,6 +7,7 @@ All notable changes to this project are documented here. Format based on [Keep a
 - Add and edit companies (`/edit`): company, founder, priorities, concerns, key dates (upcoming ones show on the map) and risks; delete companies you added. Closes #12.
 - 90-second video script, shot list and recording checklist (docs/VIDEO_SCRIPT.md).
 ### Changed
+- Quality check (docs/QUALITY_CHECK.md): arrow-key support for target tabs and fit ratings; tour arrow keys no longer interfere with page controls; faint text and the light-mode demo badge now meet WCAG AA contrast; stronger tour dimming in dark mode; brief and seed fixes for anniversary wording and Foilscope. Closes #14.
 - The demo always opens in dark mode; the toggle switches to light for the visit and is no longer saved.
 - Fit scores with fewer than three hand-rated criteria are labeled Preliminary instead of given a band.
 - Founder and business cards hide sections with nothing entered.

@@ -127,9 +127,21 @@ export function FitTab({ insight }: { insight: Insight }) {
   );
 }
 
+const RATING_OPTIONS: (number | null)[] = [1, 2, 3, 4, 5, null];
+
 function RatingInput({ label, value, onChange }: { label: string; value: number | null; onChange: (v: number | null) => void }) {
+  // A radio group: one tab stop, arrow keys move and select (WAI-ARIA radio pattern).
+  const onKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const step = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+    if (!step) return;
+    e.preventDefault();
+    const i = RATING_OPTIONS.indexOf(value);
+    const j = (i + step + RATING_OPTIONS.length) % RATING_OPTIONS.length;
+    onChange(RATING_OPTIONS[j]);
+    e.currentTarget.querySelectorAll<HTMLButtonElement>("[role=radio]")[j]?.focus();
+  };
   return (
-    <div role="radiogroup" aria-label={`Rating for ${label}`} className="flex items-center gap-1">
+    <div role="radiogroup" aria-label={`Rating for ${label}`} onKeyDown={onKey} className="flex items-center gap-1">
       {[1, 2, 3, 4, 5].map((n) => (
         <button
           key={n}
@@ -137,6 +149,7 @@ function RatingInput({ label, value, onChange }: { label: string; value: number 
           role="radio"
           aria-checked={value === n}
           aria-label={`${n}`}
+          tabIndex={value === n ? 0 : -1}
           onClick={() => onChange(n)}
           className={`size-7 rounded-md border text-xs tabular-nums ${
             value != null && n <= value ? "border-accent bg-accent text-accent-ink" : "border-line text-muted hover:border-line-strong"
@@ -149,6 +162,7 @@ function RatingInput({ label, value, onChange }: { label: string; value: number 
         type="button"
         role="radio"
         aria-checked={value == null}
+        tabIndex={value == null ? 0 : -1}
         onClick={() => onChange(null)}
         className={`ml-1 whitespace-nowrap rounded-md px-1.5 text-xs ${value == null ? "font-medium text-ink" : "text-faint hover:text-muted"}`}
       >

@@ -561,7 +561,7 @@ export const SEED: SeedTarget[] = [
     touchpoints: [
       { d: 1100, type: "event", summary: "Met Ruth at a retailer event; she'd heard about Corner Pocket's tournament leagues." },
       { d: 900, type: "call", summary: "Ruth mentioned no family member wants to take over eventually." },
-      { d: 700, type: "gift-note", summary: "Sent a note for the store's 40th anniversary." },
+      { d: 700, type: "gift-note", summary: "Sent a note for the store's anniversary." },
       { d: 500, type: "meeting", summary: "Visited all three stores. Staff loyalty is the asset." },
       { d: 300, type: "meeting", summary: "Ruth is ready to talk. Began evaluation together." },
       { d: 180, type: "meeting", summary: "Diligence kickoff; agreed early on keeping the name and all staff." },
@@ -624,7 +624,7 @@ export const SEED: SeedTarget[] = [
       ],
       communication: "Patient, reflective and generous with his time. Enjoys hearing how our brands design products. Prefers quarterly check-ins.",
       keyDates: [
-        { inDays: 75, label: "Wildmoor's 15th anniversary" },
+        { inDays: 75, label: "Wildmoor's founding anniversary" },
         { inDays: 210, label: "Next major title launches (Martin's milestone before any deal)" },
       ],
       notes: "Recently started asking how we handle integrations, which is a meaningful shift.",
@@ -658,7 +658,7 @@ export const SEED: SeedTarget[] = [
       { label: "Currency exposure (CAD)", severity: "low" },
     ],
     reachOutIdeas: [
-      "Congratulate Martin ahead of Wildmoor's 15th anniversary.",
+      "Congratulate Martin ahead of Wildmoor's founding anniversary.",
       "Share how Harborlight's first 30 days went. He asked about our integration approach.",
     ],
   },

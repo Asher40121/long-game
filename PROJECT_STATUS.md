@@ -1,7 +1,7 @@
 # Long Game: Project Status
 
 **Current phase:** Phase 3, Build
-**Last updated:** 2026-11-24
+**Last updated:** 2026-11-25
 
 ## Decisions
 - 2026-11-20: Samples first; live AI later (v1.0 "Could").
@@ -47,4 +47,5 @@ https://asher40121.github.io/long-game/ (deployed 2026-11-24 from the gh-pages b
 ## Next actions
 - Done: #13 README + screenshots; #20 video script, shot list and recording checklist (docs/VIDEO_SCRIPT.md). README GIF replaced by a video still + link (no converter on this Mac).
 - Done: #12 add/edit companies (/edit). Dark mode is the default on every visit (2026-11-24, Phil's request).
-- Remaining: Phil records the video; add the link to README and landing (plain link, no embed); #14 quality pass; then Phase 5 (LinkedIn post, application blurb).
+- Done: #14 quality check (docs/QUALITY_CHECK.md), 2026-11-25.
+- Remaining: Phil records the video; add the link to README and landing (plain link, no embed); then Phase 5 (LinkedIn post, application blurb).

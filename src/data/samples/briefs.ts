@@ -254,7 +254,7 @@ In order: continuing to design games; games that teach, which he won't compromis
 - The size of the US specialty-toy opportunity. Pinewick's sales team could estimate it.
 
 ### Recommended next step
-Corporate Development sends Martin congratulations ahead of Wildmoor's 15th anniversary in about 11 weeks, and shares how Harborlight's first 30 days went, since he asked about our approach.`,
+Corporate Development sends Martin congratulations ahead of Wildmoor's founding anniversary in about 11 weeks, and shares how Harborlight's first 30 days went, since he asked about our approach.`,
 
   lumen: `**Recommendation:** Stay passed. A supply partnership for Brightkeep's premium line may be worth a conversation; an acquisition isn't.
 
@@ -317,7 +317,7 @@ Foilscope is a price-guide and collection-tracking app for graded and raw tradin
 - But it needs software and data skills we don't have in-house.
 
 ### What the founder cares about
-Not yet known. We haven't spoken with Nadia Brooks.
+Not yet known. We've heard Nadia Brooks speak on an industry panel but haven't spoken with her.
 
 ### Key risks
 - **Medium:** Technology and data integration far from our core.

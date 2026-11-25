@@ -159,6 +159,9 @@ function StoryOverlay({ step, setStep, stop }: { step: number; setStep: (n: numb
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") stop();
+      // Leave arrow keys alone when they belong to a control on the page (sliders, fields, tabs, ratings).
+      const el = e.target;
+      if (el instanceof Element && el.closest("input, select, textarea, [role=tablist], [role=radiogroup]")) return;
       if (e.key === "ArrowRight" && !last) setStep(step + 1);
       if (e.key === "ArrowLeft" && step > 0) setStep(step - 1);
     };
@@ -178,11 +181,11 @@ function StoryOverlay({ step, setStep, stop }: { step: number; setStep: (n: numb
             left: rect.left - pad,
             width: rect.width + pad * 2,
             height: rect.height + pad * 2,
-            boxShadow: "0 0 0 9999px rgb(0 0 0 / 0.45)",
+            boxShadow: "0 0 0 9999px var(--scrim)",
           }}
         />
       ) : (
-        <div aria-hidden className="absolute inset-0 bg-black/45" />
+        <div aria-hidden className="absolute inset-0 bg-[var(--scrim)]" />
       )}
 
       <div
