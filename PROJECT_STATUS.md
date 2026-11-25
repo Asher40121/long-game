@@ -35,7 +35,7 @@ https://asher40121.github.io/long-game/ (deployed 2026-11-24 from the gh-pages b
 
 ## Built so far (Phase 3)
 - Landing page, Relationship map, pipeline board/table with Needs attention, target pages (founder, timeline, log a touchpoint), fit scorecard with adjustable weights, portfolio gaps, 12 sample decision briefs plus assembled briefs, six-step guided tour, light/dark, reset, storage note.
-- 118 tests passing (fit, health, briefs truthfulness, seed integrity, storage).
+- 111 tests passing (fit, health, briefs truthfulness, seed integrity, storage).
 
 ## Phase 2 deliverables
 - docs/WIREFRAMES.md, docs/ARCHITECTURE.md, docs/ROADMAP.md
